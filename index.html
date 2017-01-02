@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" src="./css/index.css" />
+        <script src="http://140.119.164.162:8080/bower_components/web3/dist/web3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="./js/index.js"></script>
+    </head>
+<body>
+    <div id="container">
+      <div id="left-block">
+        <h4>RentableLockService</h4>
+        <pre>
+        </pre>
+      </div>
+      <div id="right-block">
+        <h4>控制面板</h4>
+        <h6>每1秒 需 0.01 ether</h6>
+        <input id="account" type="text" placeholder="租用人 Address" />
+        <input id="deposit" type="text" placeholder="押金 (ether)" />
+        <button id="rent">租用</button>
+        <button id="return">歸還</button>
+        <button id="lock">上鎖</button>
+        <button id="unlock">解鎖</button>
+        <h4 id="locked">智能鎖狀態 (上鎖/解鎖) : </h4>
+        <h4 id="renttime">租用時間 (秒) : </h4>
+        <h4 id="renterbalance">租用人以太幣帳戶餘額 (ether) : </h4>
+        <h4 id="rentablelockbalance">RentableLockService 合約帳戶餘額 (ether) : </h4>
+        <div id="log">
+        </div>
+      </div>
+    </div>
+</body>
+</html>

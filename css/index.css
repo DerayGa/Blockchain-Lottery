@@ -1,0 +1,25 @@
+body {
+  width: 100%;
+}
+
+pre {
+  background: #E0F2F7;
+}
+
+#container {
+  width: 1300px
+}
+
+#left-block {
+  float: left;
+  width: 100%;
+  max-width: 70%;
+}
+
+#right-block {
+  float: left;
+  width: 100%;
+  max-width: 30%;
+  position: relative;
+  left: 20px
+}
