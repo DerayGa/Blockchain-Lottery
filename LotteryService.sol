@@ -105,7 +105,10 @@ contract LotteryService {
   }
 
   function cheatLottery() {
-
+    resetGame();
+    lotteryNumbers = [7, 8, 9, 10, 20];
+    LotteryNumbers(lotteryNumbers, now);
+    findWinner();
   }
 
   function findWinner() internal {
@@ -134,14 +137,15 @@ contract LotteryService {
   }
 
   function sendMoneyToWinner() internal {
-    var count = historyBets.length;
+    var count = lotteryWinners.length;
     if (count == 0) {
       NoWinner(now);
     } else {
-      var bonus = (this.balance * 0.99) / count;
-      for(var i = 0 ; i < historyBets.length ; i++) {
-        historyBets[i].send(bonus);
-        LotteryWinner(historyBets[i], bonus, now);
+      var bonus = this.balance / count;
+      // bonus = bonus - (bonus/100);
+      for(var i = 0 ; i < lotteryWinners.length ; i++) {
+        lotteryWinners[i].send(bonus);
+        LotteryWinner(lotteryWinners[i], (bonus / 1 ether), now);
       }
     }
     TotalBetAmount(this.balance / 1 ether);

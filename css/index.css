@@ -5,7 +5,7 @@ body {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #EF9A9A;
 }
 
@@ -72,8 +72,27 @@ button#bet {
   font-size: 28px;
 }
 button#lottery {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   background-color: #F9A825;
   font-size: 28px;
+}
+button#cheatLottery {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  font-size: 14px;
+}
+button#clear {
+  position: relative;
+  width: 100px;
+  height: 20px;
+  font-size: 14px;
+  background-color: #F44336;
 }
 label#playerEther {
   display: inline-block;

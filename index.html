@@ -7,6 +7,7 @@
     <script src="http://140.119.164.162:8080/bower_components/web3/dist/web3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/web3.js"></script>
     <script src="./js/index.js"></script>
   </head>
   <body>
@@ -22,6 +23,7 @@
         <div id="left-block">
           <p />
           <label id="eventLog">事件記錄</label>
+          <button id="clear">清除</button>
           <div id="log">
           </div>
         </div>
@@ -40,7 +42,10 @@
       <div id="tabs-2">
         <div id="lottery-block">
           <button id="lottery">開獎</button>
-          <iframe src='http://127.0.0.1:8082/' height="300px" width="100%" ></iframe>
+          <button id="cheatLottery">作弊開獎</button>
+          <div style="width: 100%">
+            <iframe src='http://127.0.0.1:8082/' height="500px" width="100%" ></iframe>
+          <div>
           <br />
           <label id="eventLog">事件記錄</label>
           <div id="log2">
@@ -49,4 +54,7 @@
       </div>
     </div>
   </body>
+  <script>
+    document.body.onselectstart=function(){if(event.srcElement.tagName==undefined)return event.returnValue=!1,!1;var n=event.srcElement.tagName.toLowerCase();if(n!="input"&&n!="textarea")return event.returnValue=!1,!1};
+  </script>
 </html>
