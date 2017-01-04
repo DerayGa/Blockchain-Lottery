@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>乙太幣樂透彩 - 管理</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="http://140.119.164.162:8080/bower_components/web3/dist/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/lottery.js"></script>
+  </head>
+  <body>
+    <div id="dialog" title="訊息">
+    </div>
+    <div id="container">
+      <label id="contractEther">總下注金額：</label>
+      <div id="left-block">
+        <p />
+        <label id="eventLog">事件記錄</label>
+        <div id="log">
+        </div>
+      </div>
+      <div id="right-block">
+        <label for="player">選擇開獎者</label>
+        <select name="player" id="player">
+        </select>
+        <p />
+        <button id="lottery">開獎</button>
+      </div>
+    </div>
+  </body>
+</html>

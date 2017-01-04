@@ -1,25 +1,104 @@
+html {
+  height: 100%;
+}
 body {
+  padding: 0px;
+  margin: 0px;
   width: 100%;
+  overflow: hidden;
+  background-color: #EF9A9A;
 }
 
+div#log {
+}
 pre {
-  background: #E0F2F7;
+  background: #424242;
+  color: white;
 }
 
-#container {
-  width: 1300px
+div#tabs-1, div#tabs-2 {
+  flex: 1;
+  display: flex;
+  background-color: #EF9A9A;
 }
 
 #left-block {
   float: left;
   width: 100%;
-  max-width: 70%;
+  max-width: 45%;
+  background-image: url('../resources/bg2.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 
 #right-block {
-  float: left;
+  float: right;
   width: 100%;
-  max-width: 30%;
+  max-width: 50%;
   position: relative;
-  left: 20px
+  padding-top: 230px;
+  background-image: url('../resources/bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#lottery-block {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+
+label {
+  display: block;
+  margin: 10px 0 0 0;
+}
+.overflow {
+  height: 200px;
+}
+button {
+  background-color: #2196F3;
+  border-style: none;
+  width: 200px;
+  height: 80px;
+  color: white;
+  cursor: pointer;
+}
+button#checkMyBet {
+  font-size: 28px;
+}
+button#bet {
+  background-color: #F44336;
+  font-size: 28px;
+}
+button#lottery {
+  background-color: #F9A825;
+  font-size: 28px;
+}
+label#playerEther {
+  display: inline-block;
+}
+label#contractEther {
+  font-size: 28px;
+  text-align: center;
+  background-color: #F44336;
+  color: white;
+}
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #F06292;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+}
+.ball.selected{
+  background-color: #E91E63;
+  color: black;
+  font-weight: bold;
 }

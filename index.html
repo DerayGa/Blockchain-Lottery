@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" src="./css/index.css" />
-        <script src="http://140.119.164.162:8080/bower_components/web3/dist/web3.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="./js/index.js"></script>
-    </head>
-<body>
-    <div id="container">
-      <div id="left-block">
-        <h4>RentableLockService</h4>
-        <pre>
-        </pre>
+  <head>
+    <title>乙太幣樂透彩</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="http://140.119.164.162:8080/bower_components/web3/dist/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div id="dialog" title="訊息">
+    </div>
+    <label id="contractEther">總下注金額：</label>
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">下注頁面</a></li>
+        <li><a href="#tabs-2">開獎頁面</a></li>
+      </ul>
+      <div id="tabs-1">
+        <div id="left-block">
+          <p />
+          <label id="eventLog">事件記錄</label>
+          <div id="log">
+          </div>
+        </div>
+        <div id="right-block">
+          <label for="player">選擇下注者</label>
+          <select name="player" id="player">
+          </select>
+          <label id="playerEther"></label>
+          <p>
+          <div id="lotteryBall"></div>
+          <p>
+          <button id="bet">下注</button>
+          <button id="checkMyBet">確認下注記錄</button>
+        </div>
       </div>
-      <div id="right-block">
-        <h4>控制面板</h4>
-        <h6>每1秒 需 0.01 ether</h6>
-        <input id="account" type="text" placeholder="租用人 Address" />
-        <input id="deposit" type="text" placeholder="押金 (ether)" />
-        <button id="rent">租用</button>
-        <button id="return">歸還</button>
-        <button id="lock">上鎖</button>
-        <button id="unlock">解鎖</button>
-        <h4 id="locked">智能鎖狀態 (上鎖/解鎖) : </h4>
-        <h4 id="renttime">租用時間 (秒) : </h4>
-        <h4 id="renterbalance">租用人以太幣帳戶餘額 (ether) : </h4>
-        <h4 id="rentablelockbalance">RentableLockService 合約帳戶餘額 (ether) : </h4>
-        <div id="log">
+      <div id="tabs-2">
+        <div id="lottery-block">
+          <button id="lottery">開獎</button>
+          <iframe src='http://127.0.0.1:8082/' height="300px" width="100%" ></iframe>
+          <br />
+          <label id="eventLog">事件記錄</label>
+          <div id="log2">
+          </div>
         </div>
       </div>
     </div>
-</body>
+  </body>
 </html>
